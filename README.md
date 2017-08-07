@@ -10,7 +10,7 @@ Plantilla jekyll realizada con [Creative Theme](http://startbootstrap.com/templa
 ## Cambios realizados para hacerlo compatible con Jekyll-assets
 
 - Para empezar, los includes por página están dentro de `_includes` y son llamados por las paginas dentro de `_pages`. Seguir el modelo de index.html. No olviden agregar el permalink a cada nueva página, para que `_plugins/page.rb` pueda entender las rutas de cada página y pueda generarse adecuadamente en Github Pages
-- Todos los scripts, estilos e imagenes están dentro de `_assets`, el CSS y SCSS siempre debe estar en la carpeta `_assets/css` como indica jekyll-assets, `main.scss` se mantiene igual, `vendor.sass` toma todos los CSS de terceros (bootstrap, animate etc...). Ambos archivos son compilados y sus versiones CSS llamados dentro de _includes/head.html de esta forma:
+- Todos los scripts, estilos e imagenes están dentro de `_assets`, el CSS, SCSS y SASS siempre debe estar en la carpeta `_assets/css` como indica jekyll-assets, `main.scss` se mantiene igual, `vendor.sass` toma todos los CSS de terceros (bootstrap, animate etc...). Ambos archivos son compilados y sus versiones CSS llamados dentro de _includes/head.html de esta forma:
 
 ```
   {% stylesheet vendor %}
