@@ -1,12 +1,52 @@
 # Site settings
 title:  MozillaCA
 email:  mozillacentroamerica@gmail.com
-description: > # Sitio web de mozilla centroamérica"
+description: Sitio web de Mozilla Centroamérica"
+author: Mozilla Centroamérica
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
+host: 0.0.0.0
+port: 4000
 
 twitter_username:
 github_username:
 
 # Build settings
 markdown: kramdown
+
+languages:
+  - es
+assets:
+  cache: .asset-cache
+  prefix: "assets"
+  compress:
+    css: true
+    js: true
+  assets:
+    - "*.png"
+    - "*.jpg"
+    - "*.svg"
+    - "*.gif"
+    - "main.css"
+    - "vendor.css"
+    - "all.js"
+#  digest: true
+  sources:
+    - _assets
+    - _assets/js
+    - _assets/css
+    - _assets/img
+    - _assets/fonts
+gems:
+  - jekyll-assets
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-livereload
+  - uglifier
+  - jekyll-admin
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .asset-cache/
+livereload: true     # You no longer need to include --livereload
+reload_port: 5678 # If you don't want to use the default port
